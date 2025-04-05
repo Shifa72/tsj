@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+  
+header {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+nav ul {
+list-style-type: none;
+display: flex;
+justify-content: center;
+}
+
+nav li {
+margin-right: 20px;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}

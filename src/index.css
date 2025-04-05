@@ -1,0 +1,77 @@
+/* Импортируем шрифт PT Serif */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  /* Устанавливаем PT Serif как основной шрифт */
+  font-family: 'PT Serif', serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  
+  /* Цвет текста и фона для светлого режима */
+  color: #333;
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9fa; /* Легкий серый оттенок для кнопок */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #ced4da; /* Серый цвет при наведении */
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Настройки для темного режима */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #fafafa; /* Белый цвет текста в темном режиме */
+    background-color: #121212; /* Темный фон */
+  }
+  a:hover {
+    color: #64ffda; /* Ярко-голубой цвет для ссылок в темном режиме */
+  }
+  button {
+    background-color: #181818; /* Темный цвет для кнопок */
+  }
+}
+
+/* Медиазапросы для настройки на разные размеры экрана */
+@media (max-width: 768px) {
+  /* Стили для мобильных устройств */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Стили для планшетов */
+}
+
+@media (min-width: 1025px) {
+  /* Стили для настольных компьютеров */
+}

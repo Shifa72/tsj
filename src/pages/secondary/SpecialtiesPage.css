@@ -1,0 +1,44 @@
+.page-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.block {
+  margin-bottom: 40px;
+}
+
+.block h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.block ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.block li strong {
+  display: inline-block;
+  width: 70px;
+  font-weight: bold;
+  margin-right: 0px;
+}
+
+.SubSpecialtyBlock{
+    margin-bottom: 10px;
+}
+
+.SubSpecialtyBlock h2{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.SubSpecialtyBlock ul {
+    list-style-type:circle ;
+  }
+
+

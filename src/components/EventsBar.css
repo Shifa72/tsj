@@ -1,0 +1,54 @@
+.events-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+
+  }
+  
+  .event-card {
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 2px;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .header-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .date {
+    flex: 1;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    margin-right: 0px;
+    margin-left: 10px;
+  }
+  
+  .topic {
+    flex: 3;
+    font-size: 12px;
+  }
+  
+  .format {
+    font-style: italic;
+    display: block;
+    margin-top: 0px;
+    font-size: 12px;
+  }
+  
+  .online {
+    color: #00bcd4;
+  }
+  
+  .offline {
+    color: #ff5722;
+  }
+  

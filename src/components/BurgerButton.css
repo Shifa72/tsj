@@ -1,0 +1,39 @@
+/* Обновленные стили для кнопки */
+.burger-button {
+    display: inline-block; /* Устанавливаем блок внутри строки */
+    padding: 10px; /* Немного увеличим размер кнопки для удобства */
+    cursor: pointer; /* Указатель мыши изменится на руку при наведении */
+    background-color: transparent; /* Прозрачная кнопка */
+    border: none; /* Убираем рамку вокруг кнопки */
+    position: relative; /* Позволяет позиционировать дочерние элементы относительно кнопки */
+    z-index: 9999; /* Повышаем приоритет отображения */
+    margin-top: 5px;
+  }
+  
+  .burger-button span {
+    display: block;
+    width: 35px; /* Ширина полосок */
+    height: 4px; /* Высота полосок */
+    margin-bottom: 6px; /* Отступ между полосками */
+    background-color: black; /* Цвет полосок */
+    transition: all 0.3s ease-in-out; /* Анимация при изменении состояния */
+  }
+  
+  /* Анимация для открытой кнопки */
+  .burger-button.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 13px; /* Смещаем первую полоску вверх */
+    position: absolute; /* Абсолютное позиционирование */
+  }
+  
+  .burger-button.open span:nth-child(2) {
+    opacity: 0; /* Вторая полоска исчезает */
+    left: -50px; /* Смещение второй полоски влево */
+    transform: rotate(-45deg);
+  }
+  
+  .burger-button.open span:nth-child(3) {
+    transform: rotate(-45deg); /* Третья полоска поворачивается */
+    bottom: 8px; /* Смещение третьей полоски вниз */
+    position: absolute; /* Абсолютное позиционирование */
+  }

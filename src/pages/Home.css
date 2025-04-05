@@ -1,0 +1,34 @@
+.grid-container {
+    height: 100%;
+    width: 99%;
+    display: grid;
+    grid-gap: 20px 20px;
+    
+    grid-template-areas: 'header header'
+                        'content content'
+                        'contentTwo contentTwo'
+                        'contentThree contentThree'
+                        'footer footer';
+    grid-template-columns: 66% 33%;
+                    
+}
+
+.box1 {
+    grid-area: header;
+}
+
+.box2 {
+    grid-area: content;
+}
+
+.box3 {
+    grid-area: contentTwo;
+}
+
+.box4 {
+    grid-area: contentThree;
+}
+
+.box5 {
+    grid-area: footer;
+}

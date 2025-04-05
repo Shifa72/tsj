@@ -1,0 +1,99 @@
+.Issue-container {
+  display: grid;
+  grid-template-areas: 'img-content'
+                        'header-text'
+                        'journal-container'
+                        'issues-select';
+  margin: 0 auto; /* Центрирование блока по горизонтали */
+  border-bottom: 1px solid white;
+  padding-top: 20px;
+  
+}
+  
+.journal-container {
+  grid-area: journal-container;
+  display: grid;
+  grid-template-columns:  1fr 3fr;
+  grid-gap: 10px; /* Промежуток между элементами */
+  padding: 0px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+  .img-journal img {
+    max-width: 200px; /* Изображение занимает всю ширину родительского элемента */
+    height: auto; /* Высота автоматически подстраивается под пропорции */
+    object-fit: cover; /* Картинка заполняет контейнер, сохраняя соотношение сторон */
+    display: block; /* Убираем лишние отступы */
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width: 768px) { /* Например, для планшетов */
+    .img-journal img {
+      width: 80%; /* Немного уменьшаем картинку на небольших экранах */
+    }
+  }
+  
+  @media screen and (max-width: 480px) { /* Для мобильных устройств */
+    .img-journal img {
+      width: 70%; /* Еще больше уменьшаем картинку на совсем маленьких экранах */
+    }
+  }
+
+  /* Класс для изображений */
+  .issue-image {
+    width: 200px;
+    margin-right: 20px;
+  }
+  
+
+  /* Класс для карточки статьи */
+
+  .articles-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.article-card {
+    width: 100%; /* Можно задать ширину карточки, например, 300px */
+    margin-bottom: 0px; /* Расстояние между карточками */
+    padding-left: 18px;
+    height:fit-content;
+    border-bottom: 0.5px solid #757373; /* Рамка вокруг карточки */
+}
+
+/* Стилизация формата и автора */
+.article-card span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+/* Вертикальная линия между форматом и автором */
+.article-card span + span::before {
+    content: "|";
+    margin: 0 10px;
+}
+
+/* Заголовок статьи */
+.article-card h4 {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1b1b1b;
+}
+
+.Issue-button1 {
+    margin-top: 20px;
+}
+
+.issues-select {
+  grid-area: issues-select;
+  display: flex;
+  justify-content: center; /* Горизонтальное выравнивание содержимого */
+  align-items: center; /* Вертикальное выравнивание содержимого */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
