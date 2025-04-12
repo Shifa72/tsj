@@ -5,54 +5,144 @@
                         'journal-container'
                         'issues-select';
   margin: 0 auto; /* Центрирование блока по горизонтали */
-  border-bottom: 1px solid white;
-  padding-top: 20px;
-  
+
+  padding-top: 10px;
 }
-  
+
+.header-journal ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  font-size: 16px;
+}
+
+.header-journal > ul li:not(:last-child)::after {
+  content: " | ";
+  margin: 0 0.5rem;
+}
+
+
 .journal-container {
   grid-area: journal-container;
   display: grid;
-  grid-template-columns:  1fr 3fr;
-  grid-gap: 10px; /* Промежуток между элементами */
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
   padding: 0px;
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
+
+.img-journal {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+
+.img-journal img {
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 10px auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.img-journal img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.img-journal img:not(.active) {
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slide-enter-right {
+  animation: slideInRight 0.5s ease forwards;
+}
+
+.slide-exit-left {
+  animation: slideOutLeft 0.5s ease forwards;
+}
+
+.slide-enter-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide-exit-right {
+  animation: slideOutRight 0.5s ease forwards;
+}
+
+@media screen and (max-width: 768px) { /* Например, для планшетов */
   .img-journal img {
-    max-width: 200px; /* Изображение занимает всю ширину родительского элемента */
-    height: auto; /* Высота автоматически подстраивается под пропорции */
-    object-fit: cover; /* Картинка заполняет контейнер, сохраняя соотношение сторон */
-    display: block; /* Убираем лишние отступы */
-    margin-top: 10px;
+    width: 80%; /* Немного уменьшаем картинку на небольших экранах */
   }
-
-  @media screen and (max-width: 768px) { /* Например, для планшетов */
-    .img-journal img {
-      width: 80%; /* Немного уменьшаем картинку на небольших экранах */
-    }
-  }
-  
-  @media screen and (max-width: 480px) { /* Для мобильных устройств */
-    .img-journal img {
-      width: 70%; /* Еще больше уменьшаем картинку на совсем маленьких экранах */
-    }
-  }
-
-  /* Класс для изображений */
-  .issue-image {
-    width: 200px;
-    margin-right: 20px;
-  }
-  
-
-  /* Класс для карточки статьи */
-
-  .articles-container {
-    display: flex;
-    flex-wrap: wrap;
 }
-.article-card {
+
+@media screen and (max-width: 480px) { /* Для мобильных устройств */
+  .img-journal img {
+    width: 70%; /* Еще больше уменьшаем картинку на совсем маленьких экранах */
+  }
+}
+/* Класс для изображений */
+.issue-image {
+  width: 200px;
+  margin-right: 20px;
+}
+
+
+/* Класс для карточки статьи */
+
+.issue-articles-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.issue-article-card {
     width: 100%; /* Можно задать ширину карточки, например, 300px */
     margin-bottom: 0px; /* Расстояние между карточками */
     padding-left: 18px;
@@ -61,7 +151,7 @@
 }
 
 /* Стилизация формата и автора */
-.article-card span {
+.issue-article-card span {
     display: inline-block;
     vertical-align: middle;
     font-size: 12px;
@@ -70,23 +160,51 @@
 }
 
 /* Вертикальная линия между форматом и автором */
-.article-card span + span::before {
+.issue-article-card span + span::before {
     content: "|";
     margin: 0 10px;
 }
 
 /* Заголовок статьи */
-.article-card h4 {
+.issue-article-card h4 {
     display: block;
     margin-top: 10px;
     font-size: 16px;
     line-height: 1.5;
-    color: #1b1b1b;
+    color: rgb(46, 50, 70);
 }
 
-.Issue-button1 {
+.issue-button1 {
     margin-top: 20px;
 }
+
+.Issue-button1 button {
+  background-color: gray;
+  color: white;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.issues-select{
+  gap: 15px;
+}
+
+.issue-image {
+  margin-top: 10px;
+  width: 80px;
+  transition: transform 0.3s ease-in-out; /* Плавный переход */
+  cursor: pointer; /* Указатель мыши меняется на руку при наведении */
+
+}
+
+.issue-image:hover {
+  transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.active {
+  box-shadow: 0px 13px 20px rgb(46, 50, 70); /* Тень вокруг активного элемента */
+}
+
 
 .issues-select {
   grid-area: issues-select;

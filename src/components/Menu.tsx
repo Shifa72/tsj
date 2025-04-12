@@ -1,4 +1,3 @@
-import React from 'react';
 import './Menu.css'; // Подключаем стили для меню
 
 interface Props {

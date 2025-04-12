@@ -1,7 +1,11 @@
-import React from 'react';
+import { useEffect } from 'react'; 
 import './PublishingEthics.css';
 
+
 const PublishingEthics = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Прокручиваем страницу до верхней позиции
+  }, []);
   return (
     <div className='PublishingEthics'>
       <h2>Этика научных публикаций</h2>
@@ -46,6 +50,7 @@ const PublishingEthics = () => {
       </ol>
     </div>
   );
-};
+}
+
 
 export default PublishingEthics;

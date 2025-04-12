@@ -5,14 +5,14 @@
   grid-template-columns: 2fr 1fr; /* Создаём два столбца: первый вдвое шире второго */
   gap: 20px;
   max-width: 1000px;
-  margin: 50px auto;
-
+  margin: 0px auto;
 }
 
 .invitation, .usefulInfo {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .invitation h2, .usefulInfo h2 {

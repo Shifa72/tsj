@@ -1,6 +1,11 @@
-import React from 'react';
+import { useEffect } from 'react'; 
+
 import './Authors.css';
+
 const Authors = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Прокручиваем страницу до верхней позиции
+  }, []);
   return (
     <div className='authors'>
       <h1>Информация для авторов Тюменского научного журнала</h1>

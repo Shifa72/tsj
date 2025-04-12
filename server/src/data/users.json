@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "email": "admin@example.com",
+    "password": "$2b$10$eATIf/pVs/D4YY9gVJXZ2esn0OfdL37x/QONox6CyXbSpzJns9DLm",
+    "name": "Администратор",
+    "role": "admin",
+    "createdAt": "2024-03-20T00:00:00.000Z",
+    "updatedAt": "2024-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "email": "user@example.com",
+    "password": "$2b$10$X7UrE2JqJqX7UrE2JqJqX7UrE2JqJqX7UrE2JqJqX7UrE2JqJqX7UrE2",
+    "name": "Пользователь",
+    "role": "user",
+    "createdAt": "2024-04-10T12:00:00.000Z",
+    "updatedAt": "2024-04-10T12:00:00.000Z"
+  },
+  {
+    "id": "3",
+    "email": "newadmin@example.com",
+    "password": "$2b$10$uEWjLraGkK3i3Cu/.15ni.Qc0jQQ.yTWvRGRrqKmrWY8k8r50aaWi",
+    "name": "Новый Администратор",
+    "role": "admin",
+    "createdAt": "2025-04-10T18:36:58.997Z",
+    "updatedAt": "2025-04-10T18:36:58.999Z"
+  },
+  {
+    "id": "4",
+    "email": "testadmin2@example.com",
+    "password": "$2b$10$p81QjaIkYB8/Ok0E6AOlNOZ98uEd8Oh0Ynq8u0gcMziLp18o6MC12",
+    "name": "Тестовый Администратор 2",
+    "role": "admin",
+    "createdAt": "2025-04-11T20:03:37.238Z",
+    "updatedAt": "2025-04-11T20:03:37.238Z"
+  }
+]

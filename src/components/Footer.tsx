@@ -1,4 +1,3 @@
-import React from 'react';
 import './footer.css'; // Импортируем стили для футера
 
 const Footer = () => {

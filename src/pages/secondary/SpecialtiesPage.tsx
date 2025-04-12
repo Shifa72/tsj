@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react'; 
 import './SpecialtiesPage.css'; // Здесь мы подключаем файл стилей
 
 // Интерфейсы для описания записей каждого раздела
@@ -106,13 +106,18 @@ const SubSpecialtyBlock = () => (
 );
 
 // Основной компонент, объединяющий все блоки
-const SpecialtiesPage = () => (
+const SpecialtiesPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Прокручиваем страницу до верхней позиции
+  }, []);
+   return (
   <div className="page-container">
     <VAKBlock />
     <GRNTIBlock />
     <OECSBlock />
     <SubSpecialtyBlock />
   </div>
-);
+  );
+};
 
 export default SpecialtiesPage;

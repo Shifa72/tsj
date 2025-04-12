@@ -1,4 +1,3 @@
-import React from 'react';
 import './BurgerButton.css'; // Подключаем стили для кнопки
 
 interface Props {

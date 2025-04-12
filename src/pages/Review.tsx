@@ -1,7 +1,11 @@
-import React from 'react';
+import { useEffect } from 'react'; 
+
 import './Review.css';
 
 const Review = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Прокручиваем страницу до верхней позиции
+  }, []);
   return (
     <div className='review'>
       <h1>Порядок рецензирования статей, направляемых для опубликования в Тюменском научном журнале</h1>

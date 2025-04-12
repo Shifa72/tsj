@@ -1,27 +1,29 @@
-import React, { FC } from 'react';
-import SearchBar from '../components/SearchBar'; // импортируем компонент поиска
+import { FC } from 'react';
+import '../components/SearchBar'; // импортируем компонент поиска
 import './Home.css'; 
-import EventsBar from '../components/EventsBar';
+import '../components/EventsBar';
 import Issue from '../components/Issue';
 import InvitationBlock from '../components/InvitationBlock';
-import SpecialtiesPage from './secondary/SpecialtiesPage';
+import ArticlesSection from '../components/ArticlesSection';
+import './secondary/SpecialtiesPage';
 
 
 const Home: FC = () => {
-  const handleSearchSubmit = (query: string) => {
+  /*const handleSearchSubmit = (query: string) => {
     // логика перенаправления на страницу поиска
     window.location.href = `/search?q=${encodeURIComponent(query)}`;
-  };
+  };*/
 
   return (
     <div className='grid-container'>
       <div className='box1'>
-      </div>
-      <div className='box2'>
         <Issue />
       </div>
-      <div className='box3'>
+      <div className='box2'>
         <InvitationBlock />
+      </div>
+      <div className='box3'>
+        <ArticlesSection />
       </div>
       <div className='box4'>
         <p>box4</p>

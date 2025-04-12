@@ -1,6 +1,10 @@
-import React from 'react';
+import { useEffect } from 'react'; 
+
 
 const ArticleHeadings = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Прокручиваем страницу до верхней позиции
+  }, []);
   return (
     <div className='rub-vak'>
         <h3>Принимаются статьи, соответствующие следующим рубрикам и
